@@ -1,0 +1,40 @@
+<header>
+    <div class="header">
+        <div class="header-logo">
+            <a href="" class="header-logo__content">
+                <img src="assets/images/logo/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="header-list">
+            <ul class="header-list__options">
+                <li>
+                    <!-- Componente de busqueda TODO -->
+                </li>
+                <li>
+                    <a href="" class="btn-shopping">
+                        <img src="assets/images/icons/icon-shopping.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="link-login">
+                        <img src="assets/images/icons/icon-user.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="btn btn-outline-secondary">
+                        Iniciar sesión
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar-content">
+            <ul class="navbar-content__list">
+                <li *ngFor="let items of navbarList">
+                    {{ items }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
