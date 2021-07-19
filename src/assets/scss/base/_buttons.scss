@@ -11,8 +11,10 @@
     }
     &.btn-outline-secondary {
         background-color: $white;
-        border: 1px solid $black;
+        border: 1px solid rgba($black, 0.5);
+        color: $black;
         font-family: $helve-m;
         font-size: 18px;
+        padding: 11px 20px;
     }
 }
