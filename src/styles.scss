@@ -1,8 +1,12 @@
 // Importamos el grid de Bootstrap
-@import '~bootstrap/scss/bootstrap-grid';
+// @import '~bootstrap/scss/bootstrap-grid';
 
 @import 'assets/scss/abstracts/variables';
+
 @import 'assets/scss/base/reset';
 @import 'assets/scss/base/fonts';
 @import 'assets/scss/base/typography';
 @import 'assets/scss/base/buttons';
+@import 'assets/scss/base/card';
+
+@import 'assets/scss/layout/grid';

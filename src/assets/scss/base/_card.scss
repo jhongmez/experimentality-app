@@ -1,0 +1,39 @@
+.card {
+    border: 1px solid $gray1;
+
+    .card-header {
+        position: relative;
+        .desc {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background-color: $primary;
+            color: $white;
+        }
+    }
+
+    .card-body {
+        background-color: $gray5;
+
+        .title {
+            color: $black;
+            font-size: 23px;
+        }
+        .pricing {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            &-main {
+                color: $primary;
+                font-family: $helve-b;
+                font-size: 27px;
+            }
+            &-secondary {
+                color: $gray3;
+                font-family: $helve-r;
+                font-size: 27px;
+            }
+        }
+        
+    }
+}
