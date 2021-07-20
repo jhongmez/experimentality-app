@@ -1,0 +1,41 @@
+<app-header></app-header>
+
+<!-- Slider -->
+<section id="hero">
+    <ngx-slick-carousel 
+        class="carousel"
+        #slickModal="slick-carousel"  
+        [config]="slideConfig"
+        (init)="slickInit($event)"
+        (afterChange)="afterChange($event)"
+        (beforeChange)="beforeChange($event)">
+        <div ngxSlickItem *ngFor="let slide of slides" class="hero-slide">
+            <!-- <img srcset="{{ slide.imgResponsive }} 320w, 
+                         {{ slide.img }} 800w" 
+                 sizes="(max-width: 380px) 280px, 
+                        800px" 
+                 src="{{ slide.img }}"> -->
+            <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+</section>
+
+<section id="category">
+    <div class="container">
+        <div class="category">
+            <div class="category-content" *ngFor="let category of categories">
+                <img [src]="category.img" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <div class="container">
+        <div class="products">
+            <h3 class="title">PRODUCTOS MAS BUSCADOS</h3>
+        </div>
+    </div>
+</section>
+
+<app-footer></app-footer>

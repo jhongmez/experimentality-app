@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
+  socialNetwork = [
+    {
+      image: "assets/images/icons/icon-facebook.svg"
+    },
+    {
+      image: "assets/images/icons/icon-twitter.svg"
+    },
+    {
+      image: "assets/images/icons/icon-instagram.svg"
+    },
+    {
+      image: "assets/images/icons/icon-youtube.svg"
+    },
+  ]
+
   constructor() { }
 
   ngOnInit(): void {

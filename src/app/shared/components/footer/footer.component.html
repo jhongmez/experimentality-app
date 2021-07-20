@@ -1,1 +1,60 @@
-<p>footer works!</p>
+<footer>
+    <div class="container">
+        <div class="footer">
+            <div class="politics">
+                <h3 class="title">
+                    POLÍTICAS
+                    <button class="button-toggle">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </h3>
+                <ul class="list">
+                    <li>
+                        <a>Políticas de privacidad</a>
+                    </li>
+                    <li>
+                        <a>Políticas de cambio</a>
+                    </li>
+                    <li>
+                        <a>Políticas de envío</a>
+                    </li>
+                    <li>
+                        <a>Términos y condiciones</a>
+                    </li>
+                    <li>
+                        <a>Responsabilidad social</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="about">
+                <h3 class="title">
+                    SOBRE NOSOTROS
+                    <button class="button-toggle">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </h3>
+                <ul class="list">
+                    <li>
+                        <a>Encuentra tu tienda</a>
+                    </li>
+                    <li>
+                        <a>Contáctanos</a>
+                    </li>
+                    <li>
+                        <a>Trabaja con nosotros</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="follow">
+                <h3 class="title">SÍGUENOS EN:</h3>
+                <ul class="list">
+                    <li *ngFor="let icon of socialNetwork">
+                        <a href="">
+                            <img [src]="icon.image" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
