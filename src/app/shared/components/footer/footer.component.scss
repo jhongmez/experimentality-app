@@ -24,14 +24,16 @@ footer {
         .politics, .about {
             .title {
                 position: relative;
-                &::before {
-                    content: '';
-                    position: absolute;
-                    bottom: -30px;
-                    left: 0;
-                    height: 1px;
-                    width: 100%;
-                    background-color: $white;
+                @media (max-width: 1024px) {
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: -30px;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: $white;
+                    }
                 }
                 @media (max-width: 1024px) {
                     font-family: $helve-m;
