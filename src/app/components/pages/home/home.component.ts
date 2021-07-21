@@ -18,7 +18,6 @@ export class HomeComponent implements OnInit {
   }  
   
   products: Product[] = [];
-  private query: string;
 
   // Hero slider
   slides = [
