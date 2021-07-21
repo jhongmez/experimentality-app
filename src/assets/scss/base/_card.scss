@@ -1,8 +1,15 @@
 .card {
-    border: 1px solid $gray1;
+    border: 1px solid $gray1;    
 
     .card-header {
         position: relative;
+        a {
+            img  {
+                width: 100%;
+                height: 240px;
+                object-fit: contain;
+            }
+        }
         .desc {
             position: absolute;
             top: 1rem;
@@ -14,24 +21,54 @@
 
     .card-body {
         background-color: $gray5;
+        padding: 38px 20px 31px;
+        height: 240px;
+        max-height: 280px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
         .title {
             color: $black;
-            font-size: 23px;
+            font-size: 20px;
+            font-family: $helve-r;
+            text-align: left;
         }
-        .pricing {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            &-main {
-                color: $primary;
-                font-family: $helve-b;
-                font-size: 27px;
+        &__pricing {
+
+            .pricing {
+                padding: 15px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &-main {
+                    color: $primary;
+                    font-family: $helve-b;
+                    font-size: 24px;
+                }
+                &-secondary {
+                    color: $gray3;
+                    font-family: $helve-r;
+                    font-size: 24px;
+                    position: relative;
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 45%;
+                        transform: translateY(-50%);
+                        height: 1px;
+                        width: 102%;
+                        background-color: $gray3;
+                    }
+                }
             }
-            &-secondary {
-                color: $gray3;
-                font-family: $helve-r;
-                font-size: 27px;
+            .buy {
+                button {
+                    width: 100%;
+                    font-size: 1rem;
+                }
             }
         }
         

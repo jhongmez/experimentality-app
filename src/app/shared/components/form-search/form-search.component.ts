@@ -8,6 +8,11 @@ import { Router } from '@angular/router';
 })
 export class FormSearchComponent implements OnInit {
 
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+  }
+
   onSearch(value: string) {
     console.log('=>', value);
     
@@ -20,11 +25,6 @@ export class FormSearchComponent implements OnInit {
     }
 
     
-  }
-
-  constructor(private router: Router) { }
-
-  ngOnInit(): void {
   }
 
 }

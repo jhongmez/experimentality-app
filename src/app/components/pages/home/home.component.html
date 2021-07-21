@@ -33,7 +33,48 @@
 <section id="products">
     <div class="container">
         <div class="products">
-            <h3 class="title">PRODUCTOS MAS BUSCADOS</h3>
+            <h3 class="products-title">PRODUCTOS MAS BUSCADOS</h3>
+            <ngx-slick-carousel
+                class="products-carousel"
+                #slickModal='slick-carousel'
+                [config]='slideConfigProducts'
+                (init)="slickInit($event)"
+                (afterChange)="afterChange($event)"
+                (beforeChange)="beforeChange($event)">
+
+                <div ngxSlickItem *ngFor="let product of products | slice:0:5">
+                    <div class="card">
+                        <div class="card-header">
+                            <a [routerLink]="['/product-detail', product.id]">
+                                <img class="image"
+                                    [src]="product.thumbnail" 
+                                    [alt]="product.title">
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <a [routerLink]="['/product-detail', product.id]" class="title">
+                                {{product.title}}
+                            </a>
+                            <div class="card-body__pricing">
+                                <div class="pricing">
+                                    <span class="pricing-main">
+                                        ${{ product.price }}
+                                    </span>
+                                    <span class="pricing-secondary">
+                                        ${{ product.price }}
+                                    </span>
+                                </div>
+                                <div class="buy">
+                                    <button class="btn btn-secondary">
+                                        Agregar al carrito
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </ngx-slick-carousel>
         </div>
     </div>
 </section>

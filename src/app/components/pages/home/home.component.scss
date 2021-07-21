@@ -7,6 +7,22 @@
         width: 100%;
         margin: 0 auto;
     }
+
+    ::ng-deep { 
+        .slick-prev,
+        .slick-next {
+            height: 100px;
+            width: 100px;
+            background: rgba($gray2, 0.2);
+            z-index: 100;
+        }
+        .slick-next {
+            right: 60px;
+        }
+        .slick-prev {
+            left: 60px;
+        }
+    }
 }
 
 #category {
@@ -44,26 +60,47 @@
     padding: 65px 0;
 
     .products {
-
-        .title {
+        .products-title {
             text-align: center;
         }
 
+        .products-carousel {
+            padding-top: 80px;
+        }
     }
-}
 
-::ng-deep { 
-    .slick-prev,
-    .slick-next {
-        height: 100px;
-        width: 100px;
-        background: rgba($gray2, 0.2);
-        z-index: 100;
-    }
-    .slick-next {
-        right: 60px;
-    }
-    .slick-prev {
-        left: 60px;
+    ::ng-deep { 
+        .container {
+            width: 60%;
+        }
+        .slick-slide {
+            margin: 0 20px;
+        }
+        /* the parent */
+        .slick-list {
+            margin: 0 -20px;
+        }
+        .slick-prev,
+        .slick-next {
+            height: 100px;
+            width: 100px;
+            z-index: 100;
+            background: url(../../../../assets/images/icons/icon-arrow-right.svg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            top: 50%;
+            transform: translateY(-50%);
+            &::before {
+                display: none;
+            }
+        }
+        .slick-next {
+            right: -100px;
+        }
+        .slick-prev {
+            left: -100px;
+            transform: rotateY(180deg);
+            top: 41%;
+        }
     }
 }
